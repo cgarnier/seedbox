@@ -1,0 +1,18 @@
+transmission:
+  image: 'cgarnier/transmission:latest'
+  environment:
+    - TIMEZONE=EST5EDT
+    - TRPASSWD=changeme
+    - TRUSER=admin
+  ports:
+    - '9091:9091'
+  volumes:
+    - /var/lib/transmission-daemon/downloads
+web:
+  image: 'cgarnier/http-server:latest'
+  command: 'http-server -p 3333 /var/lib/transmission-daemon/downloads'
+  ports:
+    - '3333:3333'
+  volumes_from:
+    - transmission
+

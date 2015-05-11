@@ -42,4 +42,8 @@ ENVIROMENT VARIABLES (only available with `docker run`)
  * `TRPASSWD` - Set the password for transmission auth (default 'admin')
  * `TIMEZONE` - As above, set a zoneinfo timezone, IE `EST5EDT`
 
+## Deploy on Tutum
+
+
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.png)](https://dashboard.tutum.co/stack/deploy/)
 
